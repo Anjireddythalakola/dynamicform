@@ -53,8 +53,8 @@
                                         Pincode required.</small>
                                 </div>
                                 <div class="d-flex mb-3">
-                                    <button type="button" class="btn btn-danger mr-3" (click)="deleteAddress(idx)"
-                                        *ngIf="!i==0">Delete</button>
+                                    <button type="button" class="btn btn-danger mr-3" (click)="deleteAddress(1)"
+                                    *ngIf="i || i.length === 0">Delete</button>
                                     <button type="button" class="btn btn-info" (click)="addAddress()">Add </button>
                                 </div>
                             </div>
@@ -82,7 +82,7 @@
                                 </div>
                                 <div class="mb-3">
                                     <button type="button" class="btn btn-danger mr-3"
-                                        (click)="deleteSubusers(idx)" *ngIf="!i==0">Delete</button>
+                                        (click)="deleteSubusers(i)" *ngIf="i || i.length === 0">Delete</button>
                                     <button type="button" class="btn btn-info" (click)="addSubusers()">Add </button>
                                 </div>
                             </div>

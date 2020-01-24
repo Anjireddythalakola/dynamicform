@@ -68,12 +68,12 @@ export class CustomComponent implements OnInit {
 		this.SubUsers.push(fg);
 	}
 
-	deleteAddress(idx: number) {
-		this.Address.removeAt(idx);
+	deleteAddress(i: any) {
+		this.Address.removeAt(i);
 	}
 
-	deleteSubusers(idx: number) {
-		this.SubUsers.removeAt(idx);
+	deleteSubusers(i: any) {
+		this.SubUsers.removeAt(i);
 	}
 
 	onFormSubmit() {

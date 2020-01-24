@@ -20,9 +20,10 @@ export class MaterialComponent implements OnInit {
     {value: 'ameerpet', viewValue: 'ameerpet'},
     {value: 'Lingampally', viewValue: 'Lingampally'}
   ];
-  post: any = false;
+ 
   forminfo:any ='';
   selectedValue: string;
+  post: any;
 
   constructor(private formBuilder: FormBuilder) { }
 
@@ -78,18 +79,20 @@ export class MaterialComponent implements OnInit {
 		this.Address.push(fg);
   }
 
-  deleteAddress(idx: number) {
-		this.Address.removeAt(idx);
+  deleteAddress(i: any) {
+		this.Address.removeAt(i);
   }
-  deleteSubusers(idx: number) {
-		this.SubUsers.removeAt(idx);
+  deleteSubusers(i: any) {
+		this.SubUsers.removeAt(i);
 	}
 
   onSubmit(post) {
     this.post = post;
     this.formGroup.reset();
   }
-
+  backbutton(){
+    this.post = !this.post;
+  }
   Reset(){
     this.formGroup.reset();
   }
